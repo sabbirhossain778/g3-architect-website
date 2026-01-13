@@ -16,12 +16,12 @@
     color: #ff900e;
 }
 /* dark02 */
-.text-gray{
+.text-gray, .fact-number{
     color: #424242;
 }
 
 /* dark03 */
-.text-light-gray{
+.text-light-gray, .fact-name{
     color: #727272;
 }
 .bg-light{
@@ -43,9 +43,11 @@ main{
 main > section{
     margin-top: 130px;
 }
-.section-title{
+/* hdfjhthtjytst */
+.section-title, .fact-number{
     font-size: 2.8rem;
     font-weight: 700;
+    margin-bottom: 24px;
 }
 
 /* header style */
@@ -86,6 +88,13 @@ main > section{
     font-weight: 700;
     font-size: 4rem;
 }
+.banner-description{
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 868px;
+    color: #727272;
+    /* border: 2px solid tomato; */
+}
 .banner-image{
    width: 100%; 
 }
@@ -102,10 +111,67 @@ main > section{
 .our-features{
     margin-left: 73px;
     max-width: 537px;
+    /* border: 2px solid tomato; */
+}
+.our-features .feature-description{
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 542px;
 }
 
 #quick-list{
     font-weight: 500;
+}
+
+/* some facts related styles */
+.fact-description{
+    max-width: 540px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #727272;
+    margin-bottom: 100px;
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* justify-content: space-between; */
+    /* margin-left: 50px; */
+}
+.fact-card{
+    border: 1px solid #ff900e;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* justify-items: center; */
+    /* padding: 66px 36px 59px 36px; */ 
+}
+.fact-number{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+/* sponsor related style */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+    margin-top: 180px;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    /* gap: 70px; */
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
 }
 
 /* responsive media query */
@@ -115,12 +181,24 @@ main > section{
     .teams{
         flex-direction: column;
     }
-    .team-img-container{
+    .team-img-container, 
+    .facts-container,
+    .sponsor-companies
+    {
         grid-template-columns: repeat(1,1fr);
     }
     .our-features{
         margin-left: 20px;
     }
+    .facts-container{
+        justify-items: center;
+        gap: 24px;
+    }
+    .sponsor-companies{
+        justify-items: center;
+        gap: 50px;
+    }
+
 }
 
 /* medium device */
@@ -131,5 +209,11 @@ main > section{
     .our-features{
         /* margin-left: 50px; */
         margin: 50px auto;
+    }
+    .sponsor-companies, .facts-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        justify-items: center;
+        /* margin-left: 100px; */
     }
 }
